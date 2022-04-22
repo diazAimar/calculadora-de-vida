@@ -20,7 +20,9 @@ const chequearInputs = () => {
 	return {proceda, clase, raza, nivel, vida};
 };
 
-const calcularVida = (clase, raza, nivel, vida) => {};
+const calcularVida = (clase, raza, nivel, vida) => {
+	// console.log('hi');
+};
 
 form.addEventListener('submit', (e) => {
 	e.preventDefault();
@@ -30,6 +32,6 @@ form.addEventListener('submit', (e) => {
 	if (proceda) {
 		calcularVida(clase, raza, nivel, vida);
 	} else {
-		console.log('bye');
+		// console.log('bye');
 	}
 });
