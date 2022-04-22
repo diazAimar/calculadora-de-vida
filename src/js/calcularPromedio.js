@@ -1,25 +1,35 @@
 'use strict';
 
 /* Selectores */
-const btnCalcularVida = document.getElementById('calcularVida');
-const inputClaseValue = document.getElementById('clase').value;
-const inputRazaValue = document.getElementById('raza').value;
-const inputNivel = document.getElementById('nivel').value;
-const inputVida = document.getElementById('vida').value;
+const form = document.getElementById('form');
 
-const chequearSelects = () => {
+const chequearInputs = () => {
+	let proceda = false;
+	let clase = document.getElementById('clase').value;
+	let raza = document.getElementById('raza').value;
+	let nivel = document.getElementById('nivel').value;
+	let vida = document.getElementById('vida').value;
 	if (
-		inputClaseValue !== 'Elegí una clase' &&
-		inputRazaValue !== 'Elegí una raza'
+		clase !== 'Elegí una clase' &&
+		raza !== 'Elegí una raza' &&
+		nivel > 0 &&
+		vida > 0
 	) {
-		console.log('HOLA');
-		// calcularVida(inputClaseValue, inputRazaValue);
-		/* btnCalcularVida.classList.remove('btn-disabled') */
+		proceda = true;
 	}
+	return {proceda, clase, raza, nivel, vida};
 };
 
-const calcularVida = (clase, raza) => {};
+const calcularVida = (clase, raza, nivel, vida) => {};
 
-btnCalcularVida.addEventListener('click', () => {
-	chequearSelects();
+form.addEventListener('submit', (e) => {
+	e.preventDefault();
+	/* Llamar a chequearInputs */
+	let {proceda, clase, raza, nivel, vida} = chequearInputs();
+	/* true ? calcularVida : alerta */
+	if (proceda) {
+		calcularVida(clase, raza, nivel, vida);
+	} else {
+		console.log('bye');
+	}
 });

@@ -13,7 +13,7 @@
 	<body>
 		<!-- Navbar -->
 		<div id="navbar">
-			<nav class="flex items-center ">
+			<nav class="flex items-center">
 				<div class="navbar">
 					<a class="btn btn-ghost normal-case text-lg md:text-xl lg:text-2xl"
 						>Calculadora de Vida</a
@@ -46,51 +46,74 @@
 			</nav>
 		</div>
 		<!-- Hero -->
-		<div class="hero bg-base-200">
+		<!-- 		<div class="hero bg-base-200">
 			<div class="hero-content text-center">
 				<div class="mt-40">
-          <h2>La vida en los MMORPG</h2>
-					
+					<h2>La vida en los MMORPG</h2>
 				</div>
 			</div>
-		</div>
+		</div> -->
 		<!-- Calculadora -->
-		<div id="calculadora" class="pt-20 bg-base-200">
-      <h1 class="text-lg font-bold mb-4 text-center w-64 mx-auto">
-        Calcula el Promedio de Vida de tu Personaje
-      </h1>
-			<div class="form flex flex-col items-center items- justify-center  w-64 sm:w-96 mx-auto">
-					<select class="select select-bordered mb-5 w-full" name="raza" id="raza">
-						<option disabled >Elegí una raza</option>
-						<option value="orco" selected>Orco</option>
-						<option value="humano">Humano</option>
-						<option value="elfo">Elfo</option>
-						<option value="elfoOscuro">Elfo Oscuro</option>
-						<option value="gnomo">Gnomo</option>
-						<option value="enano">Enano</option>
-					</select>
-					<select class="select select-bordered mb-5 w-full" ame="clase" id="clase">
-						<option disabled >Elegí una clase</option>
-						<option value="mago" selected>Mago</option>
-						<option value="paladin">Paladin</option>
-						<option value="bardo">Bardo</option>
-						<option value="ladron">Ladron</option>
-						<option value="pirata">Pirata</option>
-						<option value="trabajador">Trabajador</option>
-						<option value="asesino">Asesino</option>
-						<option value="bandido">Bandido</option>
-						<option value="clerigo">Clerigo</option>
-						<option value="guerrero">Guerrero</option>
-						<option value="cazador">Cazador</option>
-					</select>
+		<div id="calculadora" class="pt-20 bg-base-200 min-h-screen">
+			<h1 class="text-lg font-bold mb-4 text-center w-64 mx-auto">
+				Calcula el Promedio de Vida de tu Personaje
+			</h1>
+			<form
+				id="form"
+				class="form flex flex-col items-center items- justify-center w-64 sm:w-96 mx-auto"
+			>
+				<select
+					class="select select-bordered mb-5 w-full"
+					name="raza"
+					id="raza"
+				>
+					<option disabled selected>Elegí una raza</option>
+					<option value="orco">Orco</option>
+					<option value="humano">Humano</option>
+					<option value="elfo">Elfo</option>
+					<option value="elfoOscuro">Elfo Oscuro</option>
+					<option value="gnomo">Gnomo</option>
+					<option value="enano">Enano</option>
+				</select>
+				<select
+					class="select select-bordered mb-5 w-full overflow-auto"
+					ame="clase"
+					id="clase"
+				>
+					<option disabled selected>Elegí una clase</option>
+					<option value="mago">Mago</option>
+					<option value="paladin">Paladin</option>
+					<option value="bardo">Bardo</option>
+					<option value="ladron">Ladron</option>
+					<option value="pirata">Pirata</option>
+					<option value="trabajador">Trabajador</option>
+					<option value="asesino">Asesino</option>
+					<option value="bandido">Bandido</option>
+					<option value="clerigo">Clerigo</option>
+					<option value="guerrero">Guerrero</option>
+					<option value="cazador">Cazador</option>
+				</select>
 
-          <input type="number" min="1" placeholder="Ingresa tu Nivel" name="nivel" id="nivel" class="input input-bordered mb-5 w-full">
-          <input type="number" min="" placeholder="Ingresa tu Vida" name="vida" id="vida" class="input input-bordered mb-5 w-full">
-          <button class="btn btn-out w-full" id="calcularVida">
-            Calcular
-          </button>
-				</div>
-			</div>
+				<input
+					type="number"
+					min="1"
+					placeholder="Ingresa tu Nivel"
+					name="nivel"
+					id="nivel"
+					class="input input-bordered mb-5 w-full"
+				/>
+				<input
+					type="number"
+					min=""
+					placeholder="Ingresa tu Vida"
+					name="vida"
+					id="vida"
+					class="input input-bordered mb-5 w-full"
+				/>
+				<button type="submit" class="btn btn-out w-full" id="calcularVida">
+					Calcular
+				</button>
+			</form>
 		</div>
 	</body>
 </html>
