@@ -12,11 +12,3 @@ input::-webkit-inner-spin-button {
 input[type='number'] {
 	-moz-appearance: textfield;
 }
-
-select {
-	height: 36px;
-}
-
-#calculadora {
-	height: 100vh;
-}

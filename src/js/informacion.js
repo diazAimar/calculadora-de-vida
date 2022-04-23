@@ -46,21 +46,21 @@ const informacion = {
 			guerrero: 9.5,
 			cazador: 9,
 		},
-		gnomo: {
-			vidaInicial: 18,
-			promedio: {
-				mago: 6,
-				paladin: 8.5,
-				bardo: 7,
-				ladron: 6.5,
-				pirata: 8.5,
-				trabajador: 7,
-				asesino: 7.5,
-				bandido: 7.5,
-				clerigo: 7,
-				guerrero: 9,
-				cazador: 8.5,
-			},
+	},
+	gnomo: {
+		vidaInicial: 18,
+		promedio: {
+			mago: 6,
+			paladin: 8.5,
+			bardo: 7,
+			ladron: 6.5,
+			pirata: 8.5,
+			trabajador: 7,
+			asesino: 7.5,
+			bandido: 7.5,
+			clerigo: 7,
+			guerrero: 9,
+			cazador: 8.5,
 		},
 	},
 	enano: {
@@ -80,5 +80,4 @@ const informacion = {
 		},
 	},
 };
-
-// console.log(informacion);
+informacion.humano = informacion.orco;
