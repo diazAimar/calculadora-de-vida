@@ -5,10 +5,40 @@
 /* Deshabilitar flechas de input tipo number */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-	-webkit-appearance: none;
-	margin: 0;
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 input[type='number'] {
-	-moz-appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+body {
+  font-family: 'Alegreya', serif;
+  font-weight: 500;
+}
+
+#calculadora {
+  background: url(/src/images/body-background.jpg) no-repeat no-repeat;
+  background-size: cover;
+}
+
+#navbar {
+  background: url(/src/images/navbar-background.jpg) no-repeat no-repeat;
+  background-size: cover;
+}
+
+.alert-error {
+  background-color: #f87272;
+  color: #470000;
+}
+
+.alert-warning {
+  background-color: rgb(251, 189, 35);
+  color: rgb(56, 40, 0);
+}
+
+.alert-success {
+  background-color: rgb(54, 211, 153);
+  color: rgb(0, 51, 32);
 }
